@@ -8,17 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		2879399F27BD7B900056D992 /* Host_AudienceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879399E27BD7B900056D992 /* Host_AudienceApp.swift */; };
-		287939A127BD7B900056D992 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287939A027BD7B900056D992 /* ContentView.swift */; };
 		287939A327BD7B920056D992 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 287939A227BD7B920056D992 /* Assets.xcassets */; };
 		287939A627BD7B920056D992 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 287939A527BD7B920056D992 /* Preview Assets.xcassets */; };
+		287939AD27BD7BC90056D992 /* HostOrAudienceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287939AC27BD7BC90056D992 /* HostOrAudienceView.swift */; };
+		287939AF27BD7F160056D992 /* HostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287939AE27BD7F160056D992 /* HostView.swift */; };
+		287939B127BD7F3C0056D992 /* AudienceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287939B027BD7F3C0056D992 /* AudienceView.swift */; };
+		287939B427BD81990056D992 /* AgoraRtmKit in Frameworks */ = {isa = PBXBuildFile; productRef = 287939B327BD81990056D992 /* AgoraRtmKit */; };
+		287939B627BD81C90056D992 /* RTM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287939B527BD81C90056D992 /* RTM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2879399B27BD7B900056D992 /* Host Audience.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Host Audience.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2879399E27BD7B900056D992 /* Host_AudienceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Host_AudienceApp.swift; sourceTree = "<group>"; };
-		287939A027BD7B900056D992 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		287939A227BD7B920056D992 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		287939A527BD7B920056D992 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		287939AC27BD7BC90056D992 /* HostOrAudienceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostOrAudienceView.swift; sourceTree = "<group>"; };
+		287939AE27BD7F160056D992 /* HostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostView.swift; sourceTree = "<group>"; };
+		287939B027BD7F3C0056D992 /* AudienceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudienceView.swift; sourceTree = "<group>"; };
+		287939B527BD81C90056D992 /* RTM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				287939B427BD81990056D992 /* AgoraRtmKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,10 +59,13 @@
 		2879399D27BD7B900056D992 /* Host Audience */ = {
 			isa = PBXGroup;
 			children = (
+				287939AC27BD7BC90056D992 /* HostOrAudienceView.swift */,
+				287939AE27BD7F160056D992 /* HostView.swift */,
+				287939B027BD7F3C0056D992 /* AudienceView.swift */,
 				2879399E27BD7B900056D992 /* Host_AudienceApp.swift */,
-				287939A027BD7B900056D992 /* ContentView.swift */,
 				287939A227BD7B920056D992 /* Assets.xcassets */,
 				287939A427BD7B920056D992 /* Preview Content */,
+				287939B527BD81C90056D992 /* RTM.swift */,
 			);
 			path = "Host Audience";
 			sourceTree = "<group>";
@@ -83,6 +94,9 @@
 			dependencies = (
 			);
 			name = "Host Audience";
+			packageProductDependencies = (
+				287939B327BD81990056D992 /* AgoraRtmKit */,
+			);
 			productName = "Host Audience";
 			productReference = 2879399B27BD7B900056D992 /* Host Audience.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,9 @@
 				Base,
 			);
 			mainGroup = 2879399227BD7B900056D992;
+			packageReferences = (
+				287939B227BD81990056D992 /* XCRemoteSwiftPackageReference "AgoraRtm_iOS" */,
+			);
 			productRefGroup = 2879399C27BD7B900056D992 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +154,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				287939A127BD7B900056D992 /* ContentView.swift in Sources */,
+				287939AD27BD7BC90056D992 /* HostOrAudienceView.swift in Sources */,
+				287939AF27BD7F160056D992 /* HostView.swift in Sources */,
 				2879399F27BD7B900056D992 /* Host_AudienceApp.swift in Sources */,
+				287939B127BD7F3C0056D992 /* AudienceView.swift in Sources */,
+				287939B627BD81C90056D992 /* RTM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +361,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		287939B227BD81990056D992 /* XCRemoteSwiftPackageReference "AgoraRtm_iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AgoraIO/AgoraRtm_iOS";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		287939B327BD81990056D992 /* AgoraRtmKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 287939B227BD81990056D992 /* XCRemoteSwiftPackageReference "AgoraRtm_iOS" */;
+			productName = AgoraRtmKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2879399327BD7B900056D992 /* Project object */;
 }
