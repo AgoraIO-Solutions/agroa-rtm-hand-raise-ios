@@ -6,7 +6,7 @@ This repository is aimed at giving a quick demonstartion on how Agora RTM can be
 
 1) Setup a sample project on the agora console and setup a demo project that makes use of "Use an App ID for authentication" as outlined [here](https://docs.agora.io/en/Real-time-Messaging/rtm_token)
 
-2) Add a `Config.xcconfig` with the following info(Read more about config files [here](https://nshipster.com/xcconfig/))
+2) Add a `Config.xcconfig` with the following info(Read more about config files [here](https://nshipster.com/xcconfig/)), use your app id from step 1 in place of the `<Your App Id>` below.
 
 ```
 //
@@ -19,5 +19,5 @@ This repository is aimed at giving a quick demonstartion on how Agora RTM can be
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
 
-AGORA_RTM_ID=<your app id from step 1 here>
+AGORA_RTM_ID=<Your App Id>
 ```
