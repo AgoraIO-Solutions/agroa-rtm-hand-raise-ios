@@ -15,6 +15,7 @@
 		287939B127BD7F3C0056D992 /* AudienceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287939B027BD7F3C0056D992 /* AudienceView.swift */; };
 		287939B427BD81990056D992 /* AgoraRtmKit in Frameworks */ = {isa = PBXBuildFile; productRef = 287939B327BD81990056D992 /* AgoraRtmKit */; };
 		287939B627BD81C90056D992 /* RTM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287939B527BD81C90056D992 /* RTM.swift */; };
+		287939BB27BD87350056D992 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287939BA27BD87350056D992 /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,8 @@
 		287939B027BD7F3C0056D992 /* AudienceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudienceView.swift; sourceTree = "<group>"; };
 		287939B527BD81C90056D992 /* RTM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTM.swift; sourceTree = "<group>"; };
 		287939B827BD86060056D992 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		287939B927BD87090056D992 /* Host-Audience-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Host-Audience-Info.plist"; sourceTree = SOURCE_ROOT; };
+		287939BA27BD87350056D992 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,7 @@
 		2879399D27BD7B900056D992 /* Host Audience */ = {
 			isa = PBXGroup;
 			children = (
+				287939B927BD87090056D992 /* Host-Audience-Info.plist */,
 				287939AC27BD7BC90056D992 /* HostOrAudienceView.swift */,
 				287939AE27BD7F160056D992 /* HostView.swift */,
 				287939B027BD7F3C0056D992 /* AudienceView.swift */,
@@ -68,6 +72,7 @@
 				287939A427BD7B920056D992 /* Preview Content */,
 				287939B527BD81C90056D992 /* RTM.swift */,
 				287939B827BD86060056D992 /* Config.xcconfig */,
+				287939BA27BD87350056D992 /* Config.swift */,
 			);
 			path = "Host Audience";
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 				2879399F27BD7B900056D992 /* Host_AudienceApp.swift in Sources */,
 				287939B127BD7F3C0056D992 /* AudienceView.swift in Sources */,
 				287939B627BD81C90056D992 /* RTM.swift in Sources */,
+				287939BB27BD87350056D992 /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +291,7 @@
 		};
 		287939AA27BD7B920056D992 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 287939B827BD86060056D992 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -294,6 +301,7 @@
 				DEVELOPMENT_TEAM = AZ59WCD7SF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Host-Audience-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -314,6 +322,7 @@
 		};
 		287939AB27BD7B920056D992 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 287939B827BD86060056D992 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -323,6 +332,7 @@
 				DEVELOPMENT_TEAM = AZ59WCD7SF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Host-Audience-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

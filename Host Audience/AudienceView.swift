@@ -11,40 +11,43 @@ import SwiftUI
 
 
 struct AudienceView: View {
-    enum HandState {
-        case standby, handRaised, calledOn
-    }
-
-    @State var handState: HandState = .standby
+    @StateObject var rtm: RTM = .init()
 
     let logger = Logger(subsystem: "io.agora.HandRaiseDemo", category: "AudienceView")
 
     @ViewBuilder
     var body: some View {
-        switch handState {
-        case .standby:
-            Button("Raise Hand") {
-                raiseHand()
+        VStack {
+            Text("Audience Members")
+                .font(.title2.bold())
+                .padding()
+
+            Text("\(rtm.memberCount)").font(.callout.bold())
+            switch rtm.audienceState {
+            case .standBy:
+                Button("Raise Hand") {
+                    raiseHand()
+                }
+                .buttonStyle(.borderedProminent)
+            case .raisedHand:
+                Button("Put hand down") {
+                    lowerHand()
+                }
+                .buttonStyle(.borderedProminent)
+            case .calledOn:
+                Text("You have been called on")
             }
-            .buttonStyle(.borderedProminent)
-        case .handRaised:
-            Button("Put hand down") {
-                lowerHand()
-            }
-            .buttonStyle(.borderedProminent)
-        case .calledOn:
-            Text("You have been called on")
         }
     }
 
     private func raiseHand() {
         logger.info("User raises hand")
-        handState = .handRaised
+        rtm.raiseHand()
     }
 
     private func lowerHand() {
         logger.info("User lowers hand")
-        handState = .calledOn
+        rtm.lowerHand()
     }
 }
 
